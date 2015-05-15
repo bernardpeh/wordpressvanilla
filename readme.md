@@ -17,13 +17,15 @@ password: yourprojectname
 
 ## INSTALLATION
 
-* fork this repo or if you want to test this out, clone this repo in your machine. 
+* Clone this repo as it is if you want to test this out. 
 
 ```
 git clone git@github.com/bernardpeh/wordpressvanilla yourproject
 cd yourproject
 composer update
 ```
+
+If you are working on your own project, quickest way is to fork this repo and clone it instead.
 
 ## Setting up Project
 
@@ -73,4 +75,4 @@ ln -s ../../environment/wp-config-custom.php wp-config.php
 
 * test by visiting yourproject.local
 
-* login using username: wvadmin, passwd: wvadmin
+* login to wordpress admin http://yourprojectname.local/wp-admin with username: wvadmin, passwd: wvadmin
