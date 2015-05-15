@@ -1,0 +1,33 @@
+{
+    "name": "threesacrowdinternal",
+    "description": "wordpressvanilla",
+    "license": "proprietary",
+
+    "repositories": [
+        {   
+            "type":"composer", 
+            "url":"http://wpackagist.org"
+        }
+    ],
+
+
+    "require": {
+        "johnpbloch/wordpress": "*",
+        "wpackagist-plugin/wp-super-cache": "*",
+        "wpackagist-plugin/bwp-google-xml-sitemaps": "*",
+        "wpackagist-plugin/ninja-forms": "*",
+        "wpackagist-plugin/wordpress-seo": "*"
+    },
+    "require-dev": {
+    },
+
+    "minimum-stability": "stable",
+
+    "extra": {
+        "wordpress-install-dir": "code/wp",
+        "installer-paths": {
+            "code/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+            "code/wp-content/themes/": ["type:wordpress-theme"]
+        }
+    }
+}
