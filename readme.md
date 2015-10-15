@@ -6,14 +6,15 @@ This is a wordpress skeleton vm for rapid development. It is structured so that 
 
 * Install vagrant and virtualbox
 
-* Database setup:
+* Database and Config setup:
 
-Create a db called yourprojectname (a project name that you like) with
+Create a db called yourprojectname (a project name that you like). Create a mysql :ewuser to access the db. To make it easy and quick. let us create wordpressvanilla user in the sql 
 
 ```
-username: yourprojectname
-password: yourprojectname
+CREATE USER 'wordpressvanilla'@'localhost' IDENTIFIED WITH mysql_native_password;GRANT ALL PRIVILEGES ON *.* TO 'wordpressvanilla'@'localhost' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;SET PASSWORD FOR 'wordpressvanilla'@'localhost' = PASSWORD('wordpressvanilla');
 ```
+
+Configure environmental/local/wp-config-local.php to match your environmental settings.
 
 ## INSTALLATION
 

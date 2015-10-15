@@ -11,7 +11,7 @@ define( 'DB_HOST', 'localhost' ); // Probably 'localhost'
 // ===================================================
 // Default theme - Based on the foundation theme - a responsive starter theme
 // ===================================================
-define( 'WP_DEFAULT_THEME', 'twentyfourteen' );
+define( 'WP_DEFAULT_THEME', 'twentyfifteen' );
 define( 'WP_MEMORY_LIMIT', '64M' );
 
 // ========================
@@ -75,5 +75,5 @@ define( 'STAGING_DOMAIN', '%%WP_STAGING_DOMAIN%%' ); // Does magic in WP Stack t
 // Bootstrap WordPress
 // ===================
 if ( !defined( 'ABSPATH' ) )
-    define( 'ABSPATH', 'var/www/code/wp/' );
+    define( 'ABSPATH', '/var/www/code/wp/' );
 require_once( ABSPATH . 'wp-settings.php' );
