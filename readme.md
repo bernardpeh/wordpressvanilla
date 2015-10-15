@@ -8,7 +8,7 @@ This is a wordpress skeleton vm for rapid development. It is structured so that 
 
 * Database and Config setup:
 
-Create a db called yourprojectname (a project name that you like). Create a mysql :ewuser to access the db. To make it easy and quick. let us create wordpressvanilla user in the sql 
+Create a db called yourprojectname (a project name that you like). Create a mysql user to access the db. To make it easy and quick, let us create wordpressvanilla user using sql 
 
 ```
 CREATE USER 'wordpressvanilla'@'localhost' IDENTIFIED WITH mysql_native_password;GRANT ALL PRIVILEGES ON *.* TO 'wordpressvanilla'@'localhost' REQUIRE NONE WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;SET PASSWORD FOR 'wordpressvanilla'@'localhost' = PASSWORD('wordpressvanilla');
@@ -18,7 +18,7 @@ Configure environmental/local/wp-config-local.php to match your environmental se
 
 ## INSTALLATION
 
-* Clone this repo as it is if you want to test this out. 
+* For quick install, clone this repo. 
 
 ```
 git clone git@github.com/bernardpeh/wordpressvanilla yourproject
@@ -29,11 +29,13 @@ composer update
 
 You should see that the composer comes with the wordpress core, wp-super-cache and wp-seo preconfigured. Comment the plugins off if you want to have a plain install.
 
-If you are working on your own project, quickest way is to fork this repo and clone it instead.
+If you are working on your own project, quickest way is to fork this repo and make changes to it straight away.
 
 ## Setting up Project
 
 * Mass renaming files
+
+If you want to call this project with a differnet name,
 
 ```
 cd yourproject
@@ -51,15 +53,20 @@ vagrant up
 
 This will configure your new vm. Will take some time...
 
-Once done, configure wp-config.php
+In your parent host, edit your host file to point to the vm
 
 ```
+vi /etc/hosts
+192.168.56.110 wordpressvanilla.local www.wordpressvanilla.local
+```
+
+shell in the vm and run setup.
+
+```
+vagrant ssh
 ./setup/setup_local.sh
 ```
 
-* Import db from db/yourproject.sql
-
-* Setup web server with document root as yourfolder/code
 
 ## Testing
 
