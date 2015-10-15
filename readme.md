@@ -64,6 +64,7 @@ shell in the vm and run setup.
 
 ```
 vagrant ssh
+cd /var/www/wordpressvanilla
 ./setup/setup_local.sh
 ```
 
