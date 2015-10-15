@@ -1,5 +1,5 @@
 {
-    "name": "threesacrowdinternal",
+    "name": "bernardpeh",
     "description": "wordpressvanilla",
     "license": "proprietary",
 
@@ -14,8 +14,6 @@
     "require": {
         "johnpbloch/wordpress": "*",
         "wpackagist-plugin/wp-super-cache": "*",
-        "wpackagist-plugin/bwp-google-xml-sitemaps": "*",
-        "wpackagist-plugin/ninja-forms": "*",
         "wpackagist-plugin/wordpress-seo": "*"
     },
     "require-dev": {

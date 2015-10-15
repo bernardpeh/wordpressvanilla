@@ -22,8 +22,11 @@ password: yourprojectname
 ```
 git clone git@github.com/bernardpeh/wordpressvanilla yourproject
 cd yourproject
+ln -s environmental/local/composer-local.json composer.json
 composer update
 ```
+
+You should see that the composer comes with the wordpress core, wp-super-cache and wp-seo preconfigured. Comment the plugins off if you want to have a plain install.
 
 If you are working on your own project, quickest way is to fork this repo and clone it instead.
 
@@ -50,21 +53,7 @@ This will configure your new vm. Will take some time...
 Once done, configure wp-config.php
 
 ```
-cd code/wp
-ln -s ../../environment/wp-config-local.php wp-config.php
-```
-
-## Installation in existing VM
-
-If you already have an existing vm, 
-
-* Configure your own code/environment/wp-config-custom.php
-
-* softlink code/wp/wp-config-custom.php to code/wp/wp-config.php
-
-```
-cd code/wp
-ln -s ../../environment/wp-config-custom.php wp-config.php
+./setup/setup_local.sh
 ```
 
 * Import db from db/yourproject.sql

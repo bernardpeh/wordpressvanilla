@@ -16,3 +16,5 @@
 /code/wp-content/cache
 /code/wp
 /setup/mysql_search.log
+/composer.lock
+/composer.json
