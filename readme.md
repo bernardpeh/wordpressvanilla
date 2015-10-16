@@ -74,3 +74,7 @@ cd /var/www/wordpressvanilla
 * test by visiting yourproject.local
 
 * login to wordpress admin http://yourprojectname.local/wp-admin with username: wvadmin, passwd: wvadmin
+
+## Putting the site in maintenance mode
+
+Easy to do in wordpress. No plugins needed. Copy or softlink wp-content/.maintenance to wp/.maintenance
